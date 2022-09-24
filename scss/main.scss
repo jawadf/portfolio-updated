@@ -1,0 +1,44 @@
+/*
+Main SCSS File
+==================================================
+Contains the imports to all basic styles.
+
+The file organization follows the 7-1 pattern architecture
+https://sass-guidelin.es/#the-7-1-pattern
+*/
+
+/*
+ * Mixins and Variables
+ * ---------------------------- */
+ @import 'abstracts/variables';
+ @import 'abstracts/mixins/media-queries';
+ @import 'abstracts/mixins/placeholder';
+
+ 
+ /*
+  * Base stuff
+  * ---------- */
+ @import 'base/base';
+ @import 'base/font';
+ @import 'base/typography';
+ 
+ /*
+  * Components
+  * ---------- */
+ @import 'components/input';
+ @import 'components/button';
+ @import 'components/card';
+ @import 'components/success';
+
+
+ /*
+  * Layout-related sections
+  * ----------------------- */
+ @import 'layout/container';
+ @import 'layout/visibility';
+
+
+  /*
+  * Pages
+  * ----------------------- */
+ @import 'pages/homepage';

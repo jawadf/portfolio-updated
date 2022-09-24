@@ -1,0 +1,23 @@
+.base-button {
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 13px 6px;
+    border-radius: $radius-base;
+    width: 100%;
+    font-size: $font-size-base;
+}
+
+.button-dark {
+    color: $white;
+    background-color: $ultra-dark-violet;
+    border-color: $ultra-dark-violet;
+    transition: all .3s ease-out;
+
+    &:hover {
+        background-color: $secondary;
+        border-color: $secondary;
+    }
+}

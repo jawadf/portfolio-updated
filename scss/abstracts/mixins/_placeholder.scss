@@ -1,0 +1,8 @@
+// Placeholder styling should work on all browsers
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content} /* WebKit, Blink, Edge */
+    &:-moz-placeholder {@content} /* Mozilla Firefox 4 to 18 */
+    &::-moz-placeholder {@content} /* Mozilla Firefox 19+ */
+    &::-ms-input-placeholder {@content} /* Microsoft Edge */
+    &::placeholder {@content} /* Most modern browsers */
+  }

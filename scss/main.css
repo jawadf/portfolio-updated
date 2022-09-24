@@ -1,0 +1,425 @@
+/*
+Main SCSS File
+==================================================
+Contains the imports to all basic styles.
+
+The file organization follows the 7-1 pattern architecture
+https://sass-guidelin.es/#the-7-1-pattern
+*/
+/*
+ * Mixins and Variables
+ * ---------------------------- */
+/*
+ * Base stuff
+ * ---------- */
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../assets/fonts/EBGaramond-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../assets/fonts/EBGaramond-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../assets/fonts/EBGaramond-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../assets/fonts/EBGaramond-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-size: 18px;
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 1.8px;
+}
+
+input, button {
+  font-family: "EB Garamond", Georgia, serif;
+}
+
+/*
+ * Components
+ * ---------- */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .input-container {
+    margin-bottom: 30px;
+  }
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-input-field {
+  border-radius: 8px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  padding: 10px 15px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  /* WebKit, Blink, Edge */
+  /* Mozilla Firefox 4 to 18 */
+  /* Mozilla Firefox 19+ */
+  /* Microsoft Edge */
+  /* Most modern browsers */
+}
+@media only screen and (min-width: 992px) {
+  .form-input-field {
+    padding: 15px;
+  }
+}
+.form-input-field::-moz-placeholder {
+  color: hsl(260deg, 3%, 77%);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.form-input-field:-ms-input-placeholder {
+  color: hsl(260deg, 3%, 77%);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.form-input-field::placeholder {
+  color: hsl(260deg, 3%, 77%);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.form-input-field:focus {
+  outline: none;
+  border-color: hsl(249deg, 99%, 64%);
+}
+.form-input-field.has-error {
+  border-color: hsl(0deg, 100%, 66%);
+}
+
+.error-message {
+  color: hsl(0deg, 100%, 66%);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.base-button {
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 13px 6px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.button-dark {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(278deg, 68%, 11%);
+  border-color: hsl(278deg, 68%, 11%);
+  transition: all 0.3s ease-out;
+}
+.button-dark:hover {
+  background-color: hsl(278deg, 94%, 30%);
+  border-color: hsl(278deg, 94%, 30%);
+}
+
+/*************************
+    CARD CONTAINER
+*************************/
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 992px) {
+  .cards {
+    width: 52%;
+    margin-bottom: unset;
+  }
+}
+
+/*************************
+    SHARED CARD STYLES
+*************************/
+.card {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 285px;
+  height: 155px;
+}
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 447px;
+    height: 245px;
+  }
+}
+.card .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.card .card-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 11px;
+}
+
+/*************************
+    FRONT SIDE
+*************************/
+.card-front {
+  padding: 20px;
+  order: 1;
+  margin-top: -68px;
+}
+.card-front::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+  border-radius: 11px;
+}
+@media only screen and (min-width: 992px) {
+  .card-front::before {
+    box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card-front {
+    padding: 30px;
+    order: 0;
+    margin-top: unset;
+    margin-bottom: 37px;
+  }
+}
+.card-front .card-img {
+  z-index: 15;
+}
+
+.card-front-content {
+  position: relative;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.card-front-circles {
+  display: flex;
+  align-items: center;
+  margin-bottom: auto;
+}
+.card-front-circles .large-circle {
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+  background-color: hsl(0deg, 0%, 100%);
+  margin-right: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .card-front-circles .large-circle {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+  }
+}
+.card-front-circles .small-circle {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 992px) {
+  .card-front-circles .small-circle {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.card-front-number {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .card-front-number {
+    margin-bottom: 23px;
+    font-size: 28px;
+    letter-spacing: 3.8px;
+  }
+}
+
+.card-front-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-front-name {
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 992px) {
+  .card-front-name {
+    font-size: 14px;
+    letter-spacing: 1.8px;
+  }
+}
+
+.card-front-expiry {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 992px) {
+  .card-front-expiry {
+    font-size: 14px;
+    letter-spacing: 1.8px;
+  }
+}
+
+/*************************
+    BACK SIDE
+*************************/
+.card-back {
+  align-self: flex-end;
+  border-radius: 11px;
+}
+@media only screen and (min-width: 992px) {
+  .card-back {
+    box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+  }
+}
+
+.card-back-cvc {
+  position: absolute;
+  right: 38px;
+  top: 70px;
+  z-index: 10;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 992px) {
+  .card-back-cvc {
+    right: 57px;
+    top: 111px;
+    font-size: 14px;
+    letter-spacing: 1.8px;
+  }
+}
+
+.success-section {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.success-section:not(.hidden) {
+  display: flex;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.success-large-text {
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+
+.success-small-text {
+  color: hsl(255deg, 2%, 59%);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+/*
+ * Layout-related sections
+ * ----------------------- */
+.container {
+  max-width: 510px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1050px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+* Pages
+* ----------------------- */
+/*************************
+    PARENT CONTAINERS
+*************************/
+.fundamentals {
+  display: flex;
+}
+
+.language-logo {
+  width: 70px;
+  height: 70px;
+}
+
+/*************************
+    BACKGROUNDS
+*************************/
+/*************************
+    FORM LAYOUT
+*************************//*# sourceMappingURL=main.css.map */
