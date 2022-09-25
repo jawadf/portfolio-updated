@@ -17,42 +17,49 @@ body {
 }
 
 @font-face {
-  font-family: "EB Garamond";
-  src: url("../assets/fonts/EBGaramond-Regular.ttf") format("ttf");
+  font-family: "Basier Circle";
+  src: url("../assets/fonts/basiercircle-regular-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "EB Garamond";
-  src: url("../assets/fonts/EBGaramond-Medium.ttf") format("ttf");
+  font-family: "Basier Circle";
+  src: url("../assets/fonts/basiercircle-medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "EB Garamond";
-  src: url("../assets/fonts/EBGaramond-SemiBold.ttf") format("ttf");
+  font-family: "Basier Circle";
+  src: url("../assets/fonts/basiercircle-semibold-webfont.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "EB Garamond";
-  src: url("../assets/fonts/EBGaramond-Bold.ttf") format("ttf");
+  font-family: "Basier Circle";
+  src: url("../assets/fonts/basiercircle-bold-webfont.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 body {
   font-size: 18px;
-  font-family: "EB Garamond", Georgia, serif;
-  font-weight: 500;
+  font-family: "Basier Circle", system-ui, -apple-system, BlinkMacSystemFont, Arial;
+  font-weight: 400;
   letter-spacing: 1.8px;
 }
 
 input, button {
-  font-family: "EB Garamond", Georgia, serif;
+  font-family: "Basier Circle", system-ui, -apple-system, BlinkMacSystemFont, Arial;
+}
+
+h1 {
+  font-size: 64px;
+  letter-spacing: -2.5px;
+  line-height: 62px;
+  font-weight: 600;
 }
 
 /*
@@ -96,24 +103,24 @@ input, button {
 .form-input-field::-moz-placeholder {
   color: hsl(260deg, 3%, 77%);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 .form-input-field:-ms-input-placeholder {
   color: hsl(260deg, 3%, 77%);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 .form-input-field::placeholder {
   color: hsl(260deg, 3%, 77%);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 .form-input-field:focus {
   outline: none;
-  border-color: hsl(249deg, 99%, 64%);
+  border-color: #0048ff;
 }
 .form-input-field.has-error {
   border-color: hsl(0deg, 100%, 66%);
@@ -148,8 +155,8 @@ input, button {
   transition: all 0.3s ease-out;
 }
 .button-dark:hover {
-  background-color: hsl(278deg, 94%, 30%);
-  border-color: hsl(278deg, 94%, 30%);
+  background-color: #edeff2;
+  border-color: #edeff2;
 }
 
 /*************************
@@ -398,6 +405,15 @@ input, button {
   }
 }
 
+.header {
+  padding: 45px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hidden {
   display: none;
 }
@@ -408,6 +424,23 @@ input, button {
 /*************************
     PARENT CONTAINERS
 *************************/
+.hero {
+  padding: 90px;
+}
+
+.hero-content {
+  display: flex;
+}
+.hero-content .colored-heading {
+  color: #0048ff;
+}
+.hero-content p {
+  font-size: 22px;
+  letter-spacing: -0.7px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
 .fundamentals {
   display: flex;
 }

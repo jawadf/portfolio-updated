@@ -9,3 +9,10 @@ body {
 input, button {
     font-family: $font-family-base;
 }
+
+h1 {
+    font-size: 64px;
+    letter-spacing: -2.5px;
+    line-height: 62px;
+    font-weight: 600;
+}

@@ -6,8 +6,8 @@ $font-size-sm: 14px;
 $font-size-md: 21px;
 $font-size-lg: 28px;
 
-$font-family-base: 'EB Garamond', Georgia, serif;
-$font-weight-base: 500;
+$font-family-base: 'Basier Circle',system-ui,-apple-system,BlinkMacSystemFont,Arial;
+$font-weight-base: 400;
 $font-weight-medium: 600;
 
 $letter-spacing-base: 1.8px;
@@ -17,8 +17,12 @@ $letter-spacing-lg: 3.8px;
 $letter-spacing-xl: 4px;
 
 // Colors
-$primary: hsl(249, 99%, 64%) ;
-$secondary: hsl(278, 94%, 30%);
+
+
+
+$primary: #0048ff;
+$secondary: #edeff2;
+$tertiary: #0a0a0a;
 $danger: hsl(0, 100%, 66%);
 $white: hsl(0, 0%, 100%);
 $light-grayish-violet: hsl(270, 3%, 87%);
