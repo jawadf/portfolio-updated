@@ -3,35 +3,55 @@
 *************************/
 
 .hero {
-  padding: 90px;
+  padding: 90px 0;
 }
 
 .hero-left {
-  grid-area: 'left';
+  grid-area: left;
 }
 
 .hero-middle {
-  grid-area: 'middle';
+  grid-area: middle;
 }
 
 .hero-right {
-  grid-area: 'right';
+  grid-area: right;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  //grid-template-columns: 1fr 1fr;
   grid-template-areas:
     'middle middle'
     'left right';
 
   @include breakpoint-up(md) {
+    grid-template-columns: 25% 50% 25%;
     grid-template-areas: 'left middle right';
   }
 }
 
 .colored-heading {
+  display: block;
   color: $primary;
+}
+
+.black-bar {
+  background-color: #0d0d0d;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h4 {
+    color: $white;
+  }
+}
+
+.black-bar-images {
+  display: flex;
+  justify-content: space-between;
 }
 
 .fundamentals {
