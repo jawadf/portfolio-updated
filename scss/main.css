@@ -10,8 +10,8 @@ https://sass-guidelin.es/#the-7-1-pattern
  * Mixins and Variables
  * ---------------------------- */
 /*
- * Base stuff
- * ---------- */
+  * Base stuff
+  * ---------- */
 body {
   margin: 0;
 }
@@ -23,6 +23,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Basier Circle";
   src: url("../assets/fonts/basiercircle-medium-webfont.woff2") format("woff2");
@@ -30,6 +31,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Basier Circle";
   src: url("../assets/fonts/basiercircle-semibold-webfont.woff2") format("woff2");
@@ -37,6 +39,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Basier Circle";
   src: url("../assets/fonts/basiercircle-bold-webfont.woff2") format("woff2");
@@ -44,6 +47,7 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
 body {
   font-size: 18px;
   font-family: "Basier Circle", system-ui, -apple-system, BlinkMacSystemFont, Arial;
@@ -51,7 +55,8 @@ body {
   letter-spacing: 1.8px;
 }
 
-input, button {
+input,
+button {
   font-family: "Basier Circle", system-ui, -apple-system, BlinkMacSystemFont, Arial;
 }
 
@@ -62,15 +67,60 @@ h1 {
   font-weight: 600;
 }
 
+h2 {
+  font-size: 58px;
+  letter-spacing: -0.55px;
+  line-height: 62px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 42px;
+  letter-spacing: -0.81px;
+  line-height: 57px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  letter-spacing: -0.234px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+.text-base {
+  font-size: 16px;
+  letter-spacing: -0.14px;
+  line-height: 22.6px;
+}
+
+.text-md {
+  font-size: 18px;
+  letter-spacing: -0.16px;
+  line-height: 30px;
+}
+
+.text-lg {
+  font-size: 22px;
+  letter-spacing: -0.77px;
+  line-height: 35px;
+}
+
 /*
- * Components
- * ---------- */
+  * Components
+  * ---------- */
 .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 20px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .input-container {
     margin-bottom: 30px;
   }
@@ -85,7 +135,7 @@ h1 {
 
 .form-input-field {
   border-radius: 8px;
-  border: 1px solid hsl(270deg, 3%, 87%);
+  border: 1px solid #dedddf;
   padding: 10px 15px;
   font-size: 18px;
   letter-spacing: 0.5px;
@@ -95,39 +145,52 @@ h1 {
   /* Microsoft Edge */
   /* Most modern browsers */
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .form-input-field {
     padding: 15px;
   }
 }
-.form-input-field::-moz-placeholder {
-  color: hsl(260deg, 3%, 77%);
+
+.form-input-field::-webkit-input-placeholder {
+  color: #c4c3c6;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
+
+.form-input-field::-ms-input-placeholder {
+  color: #c4c3c6;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
 .form-input-field:-ms-input-placeholder {
-  color: hsl(260deg, 3%, 77%);
+  color: #c4c3c6;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
+
 .form-input-field::placeholder {
-  color: hsl(260deg, 3%, 77%);
+  color: #c4c3c6;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
+
 .form-input-field:focus {
   outline: none;
   border-color: #0048ff;
 }
+
 .form-input-field.has-error {
-  border-color: hsl(0deg, 100%, 66%);
+  border-color: #ff5252;
 }
 
 .error-message {
-  color: hsl(0deg, 100%, 66%);
+  color: #ff5252;
   font-size: 12px;
   letter-spacing: 0.5px;
   margin-top: 10px;
@@ -149,11 +212,13 @@ h1 {
 }
 
 .button-dark {
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(278deg, 68%, 11%);
-  border-color: hsl(278deg, 68%, 11%);
-  transition: all 0.3s ease-out;
+  color: white;
+  background-color: #21092f;
+  border-color: #21092f;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
+
 .button-dark:hover {
   background-color: #edeff2;
   border-color: #edeff2;
@@ -163,11 +228,17 @@ h1 {
     CARD CONTAINER
 *************************/
 .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 50px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .cards {
     width: 52%;
     margin-bottom: unset;
@@ -179,7 +250,8 @@ h1 {
 *************************/
 .card {
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -187,12 +259,14 @@ h1 {
   width: 285px;
   height: 155px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card {
     width: 447px;
     height: 245px;
   }
 }
+
 .card .card-img {
   position: absolute;
   top: 0;
@@ -201,6 +275,7 @@ h1 {
   height: 100%;
   z-index: 10;
 }
+
 .card .card-img img {
   height: 100%;
   width: 100%;
@@ -214,9 +289,12 @@ h1 {
 *************************/
 .card-front {
   padding: 20px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   margin-top: -68px;
 }
+
 .card-front::before {
   content: "";
   position: absolute;
@@ -225,22 +303,29 @@ h1 {
   width: 100%;
   height: 100%;
   z-index: 3;
-  box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+  -webkit-box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+          box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
   border-radius: 11px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front::before {
-    box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+    -webkit-box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+            box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
   }
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front {
     padding: 30px;
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
     margin-top: unset;
     margin-bottom: 37px;
   }
 }
+
 .card-front .card-img {
   z-index: 15;
 }
@@ -248,38 +333,51 @@ h1 {
 .card-front-content {
   position: relative;
   z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
-  color: hsl(0deg, 0%, 100%);
+  color: white;
 }
 
 .card-front-circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: auto;
 }
+
 .card-front-circles .large-circle {
   height: 33px;
   width: 33px;
   border-radius: 50%;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: white;
   margin-right: 10px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front-circles .large-circle {
     height: 50px;
     width: 50px;
     margin-right: 15px;
   }
 }
+
 .card-front-circles .small-circle {
   height: 13px;
   width: 13px;
   border-radius: 50%;
-  border: 1px solid hsl(0deg, 0%, 100%);
+  border: 1px solid white;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front-circles .small-circle {
     height: 20px;
     width: 20px;
@@ -289,7 +387,8 @@ h1 {
 .card-front-number {
   margin-bottom: 15px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front-number {
     margin-bottom: 23px;
     font-size: 28px;
@@ -298,8 +397,12 @@ h1 {
 }
 
 .card-front-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-front-name {
@@ -307,7 +410,8 @@ h1 {
   font-size: 9px;
   letter-spacing: 1px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front-name {
     font-size: 14px;
     letter-spacing: 1.8px;
@@ -318,7 +422,8 @@ h1 {
   font-size: 9px;
   letter-spacing: 1px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-front-expiry {
     font-size: 14px;
     letter-spacing: 1.8px;
@@ -329,12 +434,15 @@ h1 {
     BACK SIDE
 *************************/
 .card-back {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   border-radius: 11px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-back {
-    box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+    -webkit-box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
+            box-shadow: rgba(193, 192, 196, 0.4) 0px 40px 40px;
   }
 }
 
@@ -343,11 +451,12 @@ h1 {
   right: 38px;
   top: 70px;
   z-index: 10;
-  color: hsl(0deg, 0%, 100%);
+  color: white;
   font-size: 9px;
   letter-spacing: 1px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1024x) {
   .card-back-cvc {
     right: 57px;
     top: 111px;
@@ -357,12 +466,20 @@ h1 {
 }
 
 .success-section {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   width: 100%;
 }
+
 .success-section:not(.hidden) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -383,25 +500,46 @@ h1 {
 }
 
 .success-small-text {
-  color: hsl(255deg, 2%, 59%);
+  color: #959499;
   letter-spacing: 0.5px;
   font-weight: 600;
   margin-bottom: 50px;
 }
 
 /*
- * Layout-related sections
- * ----------------------- */
+  * Layout-related sections
+  * ----------------------- */
 .container {
-  max-width: 510px;
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 640px) {
   .container {
-    max-width: 1050px;
+    max-width: 640px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-right: 43px;
+    padding-left: 43px;
+  }
+}
+
+@media only screen and (min-width: 1024x) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
   }
 }
 
@@ -410,8 +548,12 @@ h1 {
 }
 
 .header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hidden {
@@ -419,8 +561,8 @@ h1 {
 }
 
 /*
-* Pages
-* ----------------------- */
+  * Pages
+  * ----------------------- */
 /*************************
     PARENT CONTAINERS
 *************************/
@@ -428,20 +570,39 @@ h1 {
   padding: 90px;
 }
 
+.hero-left {
+  grid-area: 'left';
+}
+
+.hero-middle {
+  grid-area: 'middle';
+}
+
+.hero-right {
+  grid-area: 'right';
+}
+
 .hero-content {
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'middle middle' 'left right';
 }
-.hero-content .colored-heading {
+
+@media only screen and (min-width: 768px) {
+  .hero-content {
+        grid-template-areas: 'left middle right';
+  }
+}
+
+.colored-heading {
   color: #0048ff;
-}
-.hero-content p {
-  font-size: 22px;
-  letter-spacing: -0.7px;
-  font-weight: 400;
-  line-height: 35px;
 }
 
 .fundamentals {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -455,4 +616,5 @@ h1 {
 *************************/
 /*************************
     FORM LAYOUT
-*************************//*# sourceMappingURL=main.css.map */
+*************************/
+/*# sourceMappingURL=main.css.map */

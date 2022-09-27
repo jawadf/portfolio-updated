@@ -1,18 +1,57 @@
 body {
-    font-size: $font-size-base;
-    font-family: $font-family-base;
-    font-weight: $font-weight-base;
-    letter-spacing: $letter-spacing-base;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  letter-spacing: $letter-spacing-base;
 }
 
-
-input, button {
-    font-family: $font-family-base;
+input,
+button {
+  font-family: $font-family-base;
 }
 
 h1 {
-    font-size: 64px;
-    letter-spacing: -2.5px;
-    line-height: 62px;
-    font-weight: 600;
+  font-size: 64px;
+  letter-spacing: -2.5px;
+  line-height: 62px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 58px;
+  letter-spacing: -0.55px;
+  line-height: 62px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 42px;
+  letter-spacing: -0.81px;
+  line-height: 57px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  letter-spacing: -0.234px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+.text-base {
+  font-size: 16px;
+  letter-spacing: -0.14px;
+  line-height: 22.6px;
+}
+
+.text-md {
+  font-size: 18px;
+  letter-spacing: -0.16px;
+  line-height: 30px;
+}
+
+.text-lg {
+  font-size: 22px;
+  letter-spacing: -0.77px;
+  line-height: 35px;
 }

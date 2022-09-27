@@ -3,31 +3,44 @@
 *************************/
 
 .hero {
-    padding: 90px;
+  padding: 90px;
+}
+
+.hero-left {
+  grid-area: 'left';
+}
+
+.hero-middle {
+  grid-area: 'middle';
+}
+
+.hero-right {
+  grid-area: 'right';
 }
 
 .hero-content {
-    display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'middle middle'
+    'left right';
 
-    .colored-heading {
-        color: $primary;
-    }
+  @include breakpoint-up(md) {
+    grid-template-areas: 'left middle right';
+  }
+}
 
-    p {
-        font-size: 22px;
-        letter-spacing: -0.7px;
-        font-weight: 400;
-        line-height: 35px;
-    }
+.colored-heading {
+  color: $primary;
 }
 
 .fundamentals {
-    display: flex;
+  display: flex;
 }
 
 .language-logo {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
 /*************************

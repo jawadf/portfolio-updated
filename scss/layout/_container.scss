@@ -1,11 +1,25 @@
 .container {
-    max-width: 510px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 
-    @include breakpoint-up(lg) { 
-        max-width: 1050px;
-    }
+  @include breakpoint-up(sm) {
+    max-width: 640px;
+  }
+
+  @include breakpoint-up(md) {
+    max-width: 768px;
+    padding-right: 43px;
+    padding-left: 43px;
+  }
+
+  @include breakpoint-up(lg) {
+    max-width: 1024px;
+  }
+
+  @include breakpoint-up(xl) {
+    max-width: 1280px;
+  }
 }
