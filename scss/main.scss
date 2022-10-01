@@ -10,37 +10,32 @@ https://sass-guidelin.es/#the-7-1-pattern
 /*
  * Mixins and Variables
  * ---------------------------- */
- @import 'abstracts/variables';
- @import 'abstracts/mixins/media-queries';
- @import 'abstracts/mixins/placeholder';
+@import 'abstracts/variables';
+@import 'abstracts/mixins/media-queries';
+@import 'abstracts/mixins/placeholder';
 
- 
- /*
+/*
   * Base stuff
   * ---------- */
- @import 'base/base';
- @import 'base/font';
- @import 'base/typography';
- 
- /*
+@import 'base/base';
+@import 'base/font';
+@import 'base/typography';
+
+/*
   * Components
   * ---------- */
- @import 'components/input';
- @import 'components/button';
- @import 'components/card';
- @import 'components/success';
+@import 'components/button';
+@import 'components/two-column-section';
 
-
- /*
+/*
   * Layout-related sections
   * ----------------------- */
- @import 'layout/container';
- @import 'layout/header';
- @import 'layout/footer';
- @import 'layout/visibility';
+@import 'layout/container';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/visibility';
 
-
-  /*
+/*
   * Pages
   * ----------------------- */
- @import 'pages/homepage';
+@import 'pages/homepage';
