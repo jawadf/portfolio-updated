@@ -43,15 +43,24 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
 
-  h4 {
-    color: $white;
-  }
+.black-bar-heading {
+  color: $white;
+  margin-bottom: 45px;
 }
 
 .black-bar-images {
   display: flex;
   justify-content: space-between;
+}
+
+.technical-skills-section {
+  padding: 150px 0;
+}
+
+.technical-skills-heading {
+  margin-bottom: 25px;
 }
 
 .fundamentals {
@@ -61,6 +70,10 @@
 .language-logo {
   width: 70px;
   height: 70px;
+}
+
+.frameworks {
+  background-color: #f3f3f3;
 }
 
 /*************************
