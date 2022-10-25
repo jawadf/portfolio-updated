@@ -5,6 +5,11 @@ body {
   letter-spacing: $letter-spacing-base;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 input,
 button {
   font-family: $font-family-base;

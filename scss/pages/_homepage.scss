@@ -3,7 +3,13 @@
 *************************/
 
 .hero {
-  padding: 90px 0;
+  padding: 90px 0 170px;
+}
+
+.hero-left,
+.hero-right {
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero-left {
@@ -12,10 +18,18 @@
 
 .hero-middle {
   grid-area: middle;
+  text-align: center;
 }
 
 .hero-right {
   grid-area: right;
+}
+
+.hero-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .hero-content {
@@ -34,6 +48,12 @@
 .colored-heading {
   display: block;
   color: $primary;
+  margin-top: 18px;
+}
+
+.hero-middle-parahraph {
+  margin: 45px 0 35px;
+  font-weight: $font-weight-base;
 }
 
 .black-bar {
