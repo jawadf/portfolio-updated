@@ -228,11 +228,15 @@ h4 {
 .hero-left,
 .hero-right {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .hero-left {
   grid-area: left;
+}
+.hero-left .circled-icon:nth-child(even) {
+  width: 100px;
+  height: 100px;
 }
 
 .hero-middle {
@@ -242,6 +246,10 @@ h4 {
 
 .hero-right {
   grid-area: right;
+}
+.hero-right .circled-icon:nth-child(odd) {
+  width: 100px;
+  height: 100px;
 }
 
 .hero-icons-container {
@@ -270,6 +278,7 @@ h4 {
 
 .hero-middle-parahraph {
   margin: 45px 0 35px;
+  padding: 0 20px;
   font-weight: 400;
 }
 
@@ -300,13 +309,18 @@ h4 {
   margin-bottom: 25px;
 }
 
+.technical-skills-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .fundamentals {
   display: flex;
 }
 
 .language-logo {
-  width: 70px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
 }
 
 .frameworks {
