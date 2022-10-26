@@ -117,6 +117,10 @@ h4 {
   line-height: 35px;
 }
 
+p {
+  margin: 0;
+}
+
 /*
   * Components
   * ---------- */
@@ -323,8 +327,8 @@ h4 {
 }
 
 .language-logo {
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
 }
 
 .frameworks {
@@ -337,8 +341,53 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   color: hsl(0deg, 0%, 100%);
+}
+
+.beyond-technical-skills-heading {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.dark-boxes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+}
+
+.beyond-box {
+  background-color: #242424;
+  padding: 15px;
+  border-radius: 4.5px;
+  display: flex;
+  flex-direction: column;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.beyond-box-line {
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #336aec;
+}
+
+.beyond-box-content {
+  padding: 47px 15px 36px;
+}
+.beyond-box-content img {
+  filter: invert(1);
+}
+
+.beyond-box-heading {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+.beyond-box-heading img {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
 }
 
 .testimonials {
