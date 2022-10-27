@@ -19,7 +19,7 @@
       <div class="container hero-content">
         <div class="hero-left">
           <div class="hero-icons-container">
-            <span class="circled-icon circled-icon-dark">
+            <span class="circled-icon circled-icon-color">
               <img src="./assets/icons/code-01.svg" />
             </span>
             
@@ -27,7 +27,7 @@
               <img src="./assets/icons/at-sign.svg" />
             </span>
 
-            <span class="circled-icon circled-icon-color">
+            <span class="circled-icon circled-icon-dark">
               <img src="./assets/icons/pencil-01.svg" />
             </span>
             
@@ -126,14 +126,10 @@
           <div>
             <h2 class="technical-skills-heading">Solid fundamentals</h2>
             <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur mollis urna sit amet semper. Vivamus iaculis blandit sem. Nunc at pulvinar nibh. Quisque faucibus fermentum lacus a malesuada.</p>
-         
-         
-
+            <p class="text-md"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur mollis urna sit amet semper. Vivamus iaculis blandit sem. Nunc at pulvinar nibh. Quisque faucibus fermentum lacus a malesuada.</p>
           </div>
-          <div>
-
-            <lottie-player src="./assets/lottie/Web Development.json" background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player>
-
+          <div class="fundamentals-lottie-container">
+            <lottie-player src="./assets/lottie/Web Development.json" class="fundamentals-lottie" background="transparent"  speed="1" loop autoplay></lottie-player>
           </div>
         </div>
       </div>
@@ -143,12 +139,17 @@
           <div>
             <h2 class="technical-skills-heading">JavaScript Frameworks</h2>
             <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur mollis urna sit amet semper. Vivamus iaculis blandit sem. Nunc at pulvinar nibh. Quisque faucibus fermentum lacus a malesuada.</p>
+            <ul class="text-md frameworks-list">
+              <li><img src="./assets/icons/check.svg" class="check-icon" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li><img src="./assets/icons/check.svg" class="check-icon" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li><img src="./assets/icons/check.svg" class="check-icon" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            </ul>
           </div>
-          <div>
-            <img class="language-logo" src="./assets/images/vue.svg" />
-            <img class="language-logo" src="./assets/images/react.svg" />
-            <img class="language-logo" src="./assets/images/redux.svg" />
-            <img class="language-logo" src="./assets/images/typescript.svg" />
+          <div class="frameworks-logos">
+            <img class="framework-logo vue" src="./assets/images/vue.svg" />
+            <img class="framework-logo react" src="./assets/images/react.svg" />
+            <img class="framework-logo redux" src="./assets/images/redux.svg" />
+            <img class="framework-logo ts" src="./assets/images/typescript.svg" />
           </div>
         </div>
       </div>
@@ -158,14 +159,10 @@
           <div>
             <h2 class="technical-skills-heading">Ecommerce Experience</h2>
             <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur mollis urna sit amet semper. Vivamus iaculis blandit sem. Nunc at pulvinar nibh. Quisque faucibus fermentum lacus a malesuada.</p>
-            <div>
-              <img class="language-logo" src="./assets/images/shopware.svg" />
-              <img class="language-logo" src="./assets/images/twig.svg" />
-              <img class="language-logo" src="./assets/images/symfony.svg" />
-            </div>
+            <img class="shopware-logo" src="./assets/images/shopware.svg" />
           </div>
-          <div>
-            <lottie-player src="./assets/lottie/Cart.json" background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player>
+          <div class="ecommerce-lottie-container">
+            <lottie-player src="./assets/lottie/Cart.json" class="ecommerce-lottie" background="transparent"  speed="1" loop autoplay></lottie-player>
           </div>
         </div>
       </div>
@@ -179,7 +176,7 @@
             <div class="beyond-box-line"></div>
             <div class="beyond-box-content">
               <h4 class="beyond-box-heading">
-                <img src="./assets/icons/move.svg" /> Seamless collaboration with designers
+                <img src="./assets/icons/heart-handshake.svg" /> Seamless collaboration with designers
               </h4>
               <p class="beyond-box-paragraph text-base">Cras vestibulum, nibh vel interdum hendrerit, est eros fringilla eros, nec facilisis libero felis quis tellus. Ut interdum lacus at mollis aliquet.</p>
               <img src="./assets/images/Integration.svg" />
@@ -191,7 +188,7 @@
             <div class="beyond-box-line"></div>
             <div class="beyond-box-content">
               <h4 class="beyond-box-heading">
-                <img src="./assets/icons/move.svg" /> Reliability
+                <img src="./assets/icons/shield-plus.svg" /> Reliability
               </h4>
               <p class="beyond-box-paragraph text-base">Cras vestibulum, nibh vel interdum hendrerit, est eros fringilla eros, nec facilisis libero felis quis tellus. Ut interdum lacus at mollis aliquet.</p>
               <img src="./assets/images/Database.svg" />
@@ -201,7 +198,7 @@
             <div class="beyond-box-line"></div>
             <div class="beyond-box-content">
               <h4 class="beyond-box-heading">
-                <img src="./assets/icons/move.svg" /> Lifelong learner
+                <img src="./assets/icons/book-open-01.svg" /> Lifelong learner
               </h4>
               <p class="beyond-box-paragraph text-base">Cras vestibulum, nibh vel interdum hendrerit, est eros fringilla eros, nec facilisis libero felis quis tellus. Ut interdum lacus at mollis aliquet.</p>
               <img src="./assets/images/Education Resources.svg" />
@@ -213,33 +210,37 @@
 
     <section class="testimonials">
       <div class="container">
-        <h2>Words people uttered about me</h2>
-        <img src="./assets/icons/quotation-mark.svg" />
-
-        <p class="text-lg">Working with Jawad was a lot of fun. He handled his tasks with great enthusiasm at all times. One of the things I really like about him is that he always completes tasks even if they are beyond his skill level. He always makes sure that his tasks are done. Also, very good follow-up questions were always asked about the task if something was unclear or logically incorrect.
-          <br>
-          It is also worth mentioning Jawad's very good social skills as well as his great character, which promoted cooperation in a positive way and was appreciated by the whole team.
-          <br>
-          We were very happy that we were able to realise the project together with him and would work with him again at any time.</p>
-        <div>Thomas Pham</div>
-        <div>Project Manager at Dasistweb GmbH</div>
+        <div class="testimonials-text-wrapper">
+          <img class="testimonials-quotation-mark" src="./assets/icons/quotation-mark.svg" />
+          <p class="testimonials-paragraph text-lg">Working with Jawad was a lot of fun. He handled his tasks with great enthusiasm at all times. One of the things I really like about him is that he always completes tasks even if they are beyond his skill level. He always makes sure that his tasks are done. Also, very good follow-up questions were always asked about the task if something was unclear or logically incorrect.</p>
+          <p class="testimonials-paragraph text-lg">It is also worth mentioning Jawad's very good social skills as well as his great character, which promoted cooperation in a positive way and was appreciated by the whole team.</p>
+          <p class="testimonials-paragraph text-lg">We were very happy that we were able to realise the project together with him and would work with him again at any time.</p>
+          <div class="testimonials-author">Thomas Pham</div>
+          <div class="testimonials-position text-md">Project Manager @ Dasistweb GmbH</div>
+        </div>
       </div>
     
     </section>
 
     <section class="contact-info" id="contactInfo">
-      <h2>Get in touch</h2>
-      <span>contact@example.com</span>
-      <div>
-
-        <lottie-player src="./assets/lottie/Welcome.json" class="contact-info-illustration" background="transparent"  speed="1"  style="width: 700px; height: 700px;" loop autoplay></lottie-player>
-
+      <div class="container">
+        <div class="contact-info-content">
+          <h2>Get in touch</h2>
+          <div>
+            <span class=""><img class="contact-info-icon" src="./assets/icons/mail-01.svg" /> contact@example.com</span>
+            <span class=""><img class="contact-info-icon" src="./assets/icons/phone.svg" /> +357 99 088 373</span>
+          </div>
+        </div>
+        <div>
+          <lottie-player src="./assets/lottie/Welcome.json" class="contact-info-illustration" background="transparent"  speed="1"  style="width: 700px; height: 700px;" loop autoplay></lottie-player>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container">
-      
+      <div class="footer-bar"></div>
+      <div class="footer-text">Portfolio - Jawad Fadel</div>
     </div>
   </footer>
   
