@@ -215,8 +215,29 @@ p {
   justify-content: space-between;
 }
 
+.header-nav {
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+.header-nav:not(:last-child) {
+  margin-right: 30px;
+}
+
 .footer {
   background-color: #0d0d0d;
+  padding-top: 30px;
+}
+
+.footer-bar {
+  height: 1px;
+  width: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.footer-text {
+  padding: 35px 0;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .hidden {
@@ -460,11 +481,13 @@ p {
 
 .testimonials-text-wrapper {
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .testimonials-quotation-mark {
   position: absolute;
-  left: -100px;
+  left: -90px;
   top: 10px;
 }
 
@@ -485,7 +508,7 @@ p {
 
 .contact-info {
   background-color: #0d0d0d;
-  padding: 120px 0 500px;
+  padding: 120px 0 600px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -495,15 +518,46 @@ p {
   position: relative;
 }
 
+.contact-info-heading {
+  margin-bottom: 40px;
+}
+
+.contact-info-content {
+  position: relative;
+  z-index: 10;
+}
+
+.contact-info-email-and-phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info-email-and-phone a {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}
+.contact-info-email-and-phone a:first-child {
+  margin-bottom: 25px;
+}
+
 .contact-info-icon {
   filter: invert(1);
+  margin-right: 16px;
+  width: 36px;
+  height: 36px;
 }
 
 .contact-info-illustration {
   position: absolute;
-  bottom: -90px;
+  bottom: -180px;
   left: 50%;
   transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
   filter: invert(1);
 }
 
