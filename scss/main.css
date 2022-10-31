@@ -72,17 +72,31 @@ h6 {
 }
 
 h1 {
-  font-size: 64px;
-  letter-spacing: -2.5px;
-  line-height: 62px;
+  font-size: 41px;
+  letter-spacing: -2.6px;
+  line-height: 40px;
   font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    letter-spacing: -2.5px;
+    line-height: 62px;
+  }
 }
 
 h2 {
-  font-size: 58px;
-  letter-spacing: -0.55px;
-  line-height: 62px;
+  font-size: 41px;
+  letter-spacing: -0.5px;
+  line-height: 50px;
   font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 58px;
+    letter-spacing: -0.55px;
+    line-height: 62px;
+  }
 }
 
 h3 {
@@ -100,21 +114,42 @@ h4 {
 }
 
 .text-base {
-  font-size: 16px;
-  letter-spacing: -0.14px;
-  line-height: 22.6px;
+  font-size: 14px;
+  letter-spacing: -0.12px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .text-base {
+    font-size: 16px;
+    letter-spacing: -0.14px;
+    line-height: 22.6px;
+  }
 }
 
 .text-md {
-  font-size: 18px;
-  letter-spacing: -0.16px;
-  line-height: 30px;
+  font-size: 16px;
+  letter-spacing: -0.44px;
+  line-height: 26px;
+}
+@media only screen and (min-width: 768px) {
+  .text-md {
+    font-size: 18px;
+    letter-spacing: -0.16px;
+    line-height: 30px;
+  }
 }
 
 .text-lg {
-  font-size: 22px;
-  letter-spacing: -0.77px;
-  line-height: 35px;
+  font-size: 20px;
+  letter-spacing: -0.68px;
+  line-height: 31px;
+}
+@media only screen and (min-width: 768px) {
+  .text-lg {
+    font-size: 22px;
+    letter-spacing: -0.77px;
+    line-height: 35px;
+  }
 }
 
 p {
@@ -182,6 +217,8 @@ p {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 @media only screen and (min-width: 640px) {
   .container {
@@ -325,9 +362,11 @@ p {
   margin-bottom: 45px;
 }
 
-.black-bar-images {
-  display: flex;
-  justify-content: space-between;
+@media only screen and (min-width: 768px) {
+  .black-bar-images {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .technical-skills-section {
@@ -338,9 +377,11 @@ p {
   margin-bottom: 25px;
 }
 
-.technical-skills-2-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+@media only screen and (min-width: 768px) {
+  .technical-skills-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .fundamentals {
@@ -352,7 +393,12 @@ p {
 }
 
 .fundamentals-lottie {
-  transform: scale(1.6);
+  transform: scale(1.2);
+}
+@media only screen and (min-width: 768px) {
+  .fundamentals-lottie {
+    transform: scale(1.6);
+  }
 }
 
 .frameworks {
@@ -373,8 +419,12 @@ p {
 }
 
 .framework-logo {
-  position: absolute;
   filter: grayscale(1);
+}
+@media only screen and (min-width: 768px) {
+  .framework-logo {
+    position: absolute;
+  }
 }
 
 .frameworks-logos {
@@ -432,11 +482,13 @@ p {
   margin-bottom: 90px;
 }
 
-.dark-boxes-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 18px;
-       column-gap: 18px;
+@media only screen and (min-width: 768px) {
+  .dark-boxes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 18px;
+         column-gap: 18px;
+  }
 }
 
 .beyond-box {
@@ -508,7 +560,7 @@ p {
 
 .contact-info {
   background-color: #0d0d0d;
-  padding: 120px 0 600px;
+  padding: 60px 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -516,6 +568,11 @@ p {
   text-align: center;
   color: hsl(0deg, 0%, 100%);
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .contact-info {
+    padding: 120px 0 600px;
+  }
 }
 
 .contact-info-heading {
@@ -552,13 +609,17 @@ p {
 }
 
 .contact-info-illustration {
-  position: absolute;
-  bottom: -180px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 900px;
   filter: invert(1);
+}
+@media only screen and (min-width: 768px) {
+  .contact-info-illustration {
+    position: absolute;
+    bottom: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+  }
 }
 
 /*************************

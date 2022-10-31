@@ -83,8 +83,12 @@
 }
 
 .black-bar-images {
-  display: flex;
-  justify-content: space-between;
+
+
+  @include breakpoint-up(md) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .technical-skills-section {
@@ -96,8 +100,11 @@
 }
 
 .technical-skills-2-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .fundamentals {
@@ -109,7 +116,11 @@
 }
 
 .fundamentals-lottie {
-  transform: scale(1.6);
+  transform: scale(1.2);
+
+  @include breakpoint-up(md) {
+    transform: scale(1.6);
+  }
 }
 
 .frameworks {
@@ -133,8 +144,11 @@
 }
 
 .framework-logo {
-  position: absolute;
   filter: grayscale(1);
+
+  @include breakpoint-up(md) {
+    position: absolute;
+  }
 }
 
 .frameworks-logos {
@@ -197,9 +211,12 @@
 }
 
 .dark-boxes-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 18px;
+
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 18px;
+  }
 }
 
 .beyond-box {
@@ -275,14 +292,18 @@
 
 .contact-info {
   background-color: #0d0d0d;
-  padding: 120px 0 600px;
+  padding: 60px 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: $white;
-  position: relative
+  position: relative;
+
+  @include breakpoint-up(md) {
+    padding: 120px 0 600px;
+  }
 }
 
 .contact-info-heading {
@@ -321,13 +342,16 @@
 }
 
 .contact-info-illustration {
-  position: absolute;
-  bottom: -180px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 900px;
   filter: invert(1);
+
+  @include breakpoint-up(md) {
+    position: absolute;
+    bottom: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+  }
 }
 
 /*************************
