@@ -74,20 +74,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  
 }
 
 .black-bar-heading {
   color: $white;
   margin-bottom: 45px;
+  text-align: center;
 }
 
-.black-bar-images {
-
+.black-bar-testimonials {
+  color: $white;
 
   @include breakpoint-up(md) {
     display: flex;
-    justify-content: space-between;
+    column-gap: 40px;
+  }
+
+  .testimonials-text-wrapper {
+    max-width: 450px;
+  }
+
+  .testimonials-quotation-mark {
+    filter: invert(1);
   }
 }
 
@@ -269,7 +278,7 @@
 
 .testimonials-quotation-mark {
   position: absolute;
-  left: -90px;
+  left: -75px;
   top: 10px;
 }
 

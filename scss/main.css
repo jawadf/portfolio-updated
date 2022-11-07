@@ -9,6 +9,64 @@ https://sass-guidelin.es/#the-7-1-pattern
 /*
  * Mixins and Variables
  * ---------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hidden-element {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(0);
+    transition: all 0.5s;
+    transition-delay: calc(100ms * var(--order));
+  }
+}
+.visibile-element {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.logo:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+/**
+
+The staggering part gets really bloated if you use :nth-child() and have many elements.
+
+You could also define an inline CSS variable in the html like style="--order: 1;" (2, 3,4 and so on for every html element).
+Then use a transition-delay of for example 'calc(100ms * var(--order))'
+This works because the inline variable will be cascaded into the .logo class.
+
+This simplifies staggering things so much.
+
+
+
+
+----------
+
+
+
+
+Two things:
+
+You can add the following one-liner to toggle a class when the entry is intersecting.
+entry.target.classList.toggle('show', entry.isIntersecting);
+
+Instead of turning off the animation with prefers-reduced-motion, turn it on.
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: all 1s;
+  }
+}
+
+*/
 /*
   * Base stuff
   * ---------- */
@@ -218,7 +276,6 @@ p {
   padding-right: 15px;
   padding-left: 15px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 @media only screen and (min-width: 640px) {
   .container {
@@ -354,19 +411,29 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .black-bar-heading {
   color: hsl(0deg, 0%, 100%);
   margin-bottom: 45px;
+  text-align: center;
 }
 
+.black-bar-testimonials {
+  color: hsl(0deg, 0%, 100%);
+}
 @media only screen and (min-width: 768px) {
-  .black-bar-images {
+  .black-bar-testimonials {
     display: flex;
-    justify-content: space-between;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
   }
+}
+.black-bar-testimonials .testimonials-text-wrapper {
+  max-width: 450px;
+}
+.black-bar-testimonials .testimonials-quotation-mark {
+  filter: invert(1);
 }
 
 .technical-skills-section {
@@ -539,7 +606,7 @@ p {
 
 .testimonials-quotation-mark {
   position: absolute;
-  left: -90px;
+  left: -75px;
   top: 10px;
 }
 

@@ -5,7 +5,6 @@
   padding-right: 15px;
   padding-left: 15px;
   box-sizing: border-box;
-  overflow: hidden;
 
   @include breakpoint-up(sm) {
     max-width: 640px;

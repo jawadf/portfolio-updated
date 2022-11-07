@@ -1,0 +1,65 @@
+
+
+@media(prefers-reduced-motion: no-preference) {
+    .hidden-element {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(0);
+        transition: all .5s;
+        transition-delay: calc(100ms * var(--order));
+    }  
+}
+
+
+.visibile-element {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+// Add a delay for each item in the list
+
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+/**
+
+The staggering part gets really bloated if you use :nth-child() and have many elements.
+
+You could also define an inline CSS variable in the html like style="--order: 1;" (2, 3,4 and so on for every html element).
+Then use a transition-delay of for example 'calc(100ms * var(--order))'
+This works because the inline variable will be cascaded into the .logo class.
+
+This simplifies staggering things so much.
+
+
+
+
+----------
+
+
+
+
+Two things:
+
+You can add the following one-liner to toggle a class when the entry is intersecting.
+entry.target.classList.toggle('show', entry.isIntersecting);
+
+Instead of turning off the animation with prefers-reduced-motion, turn it on.
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: all 1s;
+  }
+}
+
+*/
