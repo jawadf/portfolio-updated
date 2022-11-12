@@ -1,18 +1,30 @@
 .header {
-    padding: 45px 0;
+  padding: 45px 0;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  color: $text-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+
+  &:hover {
+    color: $primary;
+  }
 }
 
 .header-nav {
-    font-weight: $font-weight-medium;
-    text-decoration: none;
-    color: $text-color;
-    
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  color: $text-color;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }

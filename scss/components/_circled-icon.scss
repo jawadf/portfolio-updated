@@ -1,23 +1,25 @@
 .circled-icon {
-    display: block;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $white;
+  font-weight: $font-weight-medium;
 
-    img {
-        filter: invert(1);
-        width: 32px;
-        height: 32px;
-    }
+  img {
+    filter: invert(1);
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .circled-icon-dark {
-    background-color: $tertiary;
+  background-color: $tertiary;
 }
 
 .circled-icon-color {
-    background-color: $primary;
+  background-color: $primary;
 }

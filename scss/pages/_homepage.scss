@@ -18,7 +18,7 @@
   .circled-icon:nth-child(even) {
     width: 100px;
     height: 100px;
-  } 
+  }
 }
 
 .hero-middle {
@@ -30,8 +30,8 @@
   grid-area: right;
 
   .circled-icon:nth-child(odd) {
-      width: 100px;
-      height: 100px;
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -41,7 +41,6 @@
   justify-content: center;
   gap: 10px;
 }
-
 
 .hero-content {
   display: grid;
@@ -74,7 +73,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .black-bar-testimonials {
@@ -111,7 +109,6 @@
 }
 
 .technical-skills-2-col {
-
   @include breakpoint-up(md) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -186,28 +183,28 @@
     top: 2px;
     left: 135px;
   }
-  
+
   .react {
     width: 145px;
     height: 145px;
     top: 118px;
     left: 284px;
   }
-  
+
   .redux {
     width: 90px;
     height: 90px;
     top: 212px;
     left: 120px;
   }
-  
+
   .ts {
     width: 60px;
     height: 60px;
     top: 288px;
     left: 267px;
   }
-  
+
   .angular {
     width: 55px;
     height: 55px;
@@ -225,7 +222,6 @@
 }
 
 .ecommerce-lottie {
-
   @include breakpoint-up(sm) {
     transform: scale(1.3);
   }
@@ -246,11 +242,13 @@
 }
 
 .dark-boxes-container {
+  display: grid;
+  row-gap: 25px;
 
   @include breakpoint-up(md) {
-    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 18px;
+    row-gap: unset;
   }
 }
 
@@ -275,10 +273,11 @@
   flex-direction: column;
   height: 100%;
   padding: 47px 15px 36px;
-  
+
   img {
     filter: invert(1);
     height: 250px;
+    width: 100%;
   }
 }
 
