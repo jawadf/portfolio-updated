@@ -19,6 +19,14 @@
   }
 }
 
+.header-nav-container {
+  display: none;
+
+  @include breakpoint-up(md) {
+    display: block;
+  }
+}
+
 .header-nav {
   font-weight: $font-weight-medium;
   text-decoration: none;

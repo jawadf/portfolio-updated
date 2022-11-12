@@ -365,6 +365,16 @@ p {
   color: #336aec;
 }
 
+.header-nav-container {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-nav-container {
+    display: block;
+  }
+}
+
 .header-nav {
   font-weight: 600;
   text-decoration: none;
@@ -402,7 +412,13 @@ p {
     PARENT CONTAINERS
 *************************/
 .hero {
-  padding: 90px 0 170px;
+  padding: 70px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 90px 0 170px;
+  }
 }
 
 .hero-left,
@@ -485,7 +501,7 @@ p {
 
 .black-bar {
   background-color: #0d0d0d;
-  padding: 120px 0;
+  padding: 70px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,6 +512,12 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .black-bar {
+    padding: 120px 0;
+  }
 }
 
 .black-bar-testimonials {
@@ -532,7 +554,13 @@ p {
 }
 
 .technical-skills-section {
-  padding: 150px 0;
+  padding: 70px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .technical-skills-section {
+    padding: 150px 0;
+  }
 }
 
 .technical-skills-heading {
@@ -616,6 +644,13 @@ p {
 
 .frameworks-logos {
   position: relative;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .frameworks-logos {
+    display: block;
+  }
 }
 
 .frameworks-logos .vue {
