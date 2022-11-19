@@ -12,16 +12,25 @@
 
 .hero-left,
 .hero-right {
-  display: flex;
-  align-items: center;
+  display: none;
+
+  @include breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .hero-left {
   grid-area: left;
 
   .circled-icon:nth-child(even) {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+
+    @include breakpoint-up(lg) {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -34,8 +43,13 @@
   grid-area: right;
 
   .circled-icon:nth-child(odd) {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+
+    @include breakpoint-up(lg) {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -92,7 +106,7 @@
   }
 
   .testimonials-text-wrapper {
-    max-width: 450px;
+    max-width: 585px;
 
     &:first-child {
       margin-bottom: 70px;
@@ -292,6 +306,7 @@
   padding: 47px 15px 36px;
 
   img {
+    margin-top: auto;
     filter: invert(1);
     height: 250px;
     width: 100%;
@@ -321,20 +336,15 @@
 }
 
 .testimonials-text-wrapper {
-  position: relative;
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
 }
 
 .testimonials-quotation-mark {
-  margin-bottom: 15px;
-
-  @include breakpoint-up(md) {
-    position: absolute;
-    left: -75px;
-    top: 10px;
-    margin-bottom: unset;
-  }
+  margin-right: 35px;
+  transform: translateY(10px);
 }
 
 .testimonials-paragraph {
