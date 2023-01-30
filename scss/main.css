@@ -136,14 +136,14 @@ h6 {
 h1 {
   font-size: 41px;
   letter-spacing: -2.6px;
-  line-height: 40px;
+  line-height: 47px;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 64px;
     letter-spacing: -2.5px;
-    line-height: 62px;
+    line-height: 70px;
   }
 }
 
@@ -450,7 +450,12 @@ p {
 .colored-heading {
   display: block;
   color: #336aec;
-  margin-top: 18px;
+  margin-top: 3px;
+}
+@media only screen and (min-width: 768px) {
+  .colored-heading {
+    margin-top: 6px;
+  }
 }
 
 .hero-middle-parahraph {
@@ -676,25 +681,29 @@ p {
   padding: 47px 15px 36px;
 }
 .beyond-box-content img {
-  margin-top: auto;
   filter: invert(1);
-  height: 250px;
-  width: 100%;
 }
 
 .beyond-box-heading {
   margin-bottom: 18px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .beyond-box-heading img {
   width: 35px;
   height: 35px;
   margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .beyond-box-paragraph {
   margin-bottom: 20px;
+}
+
+.beyond-box-illustration {
+  margin-top: auto;
+  height: 250px;
+  width: 100%;
 }
 
 .testimonials {

@@ -27,13 +27,13 @@ h6 {
 h1 {
   font-size: 41px;
   letter-spacing: -2.6px;
-  line-height: 40px;
+  line-height: 47px;
   font-weight: $font-weight-medium;
 
   @include breakpoint-up(md) {
     font-size: 64px;
     letter-spacing: -2.5px;
-    line-height: 62px;
+    line-height: 70px;
   }
 }
 
